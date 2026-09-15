@@ -1,0 +1,647 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Core Medical — Design System</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link rel="icon" href="https://coremedical.com.br/wp-content/uploads/2024/12/cropped-logo_core-medical_icone_200x150-32x32.webp" sizes="32x32">
+
+<!-- ===== reference inline token styles (verbatim) ===== -->
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--cmsmasters-colors-text: var(--cmsmasters-colors-text);--wp--preset--color--cmsmasters-colors-link: var(--cmsmasters-colors-link);--wp--preset--color--cmsmasters-colors-hover: var(--cmsmasters-colors-hover);--wp--preset--color--cmsmasters-colors-heading: var(--cmsmasters-colors-heading);--wp--preset--color--cmsmasters-colors-bg: var(--cmsmasters-colors-bg);--wp--preset--color--cmsmasters-colors-alternate: var(--cmsmasters-colors-alternate);--wp--preset--color--cmsmasters-colors-bd: var(--cmsmasters-colors-bd);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<style id="dentissimo-gutenberg-inline-css">
+
+			.has-cmsmasters-colors-text-color {
+				color: var(--cmsmasters-colors-text) !important;
+			}
+
+			.has-cmsmasters-colors-text-background-color {
+				background-color: var(--cmsmasters-colors-text) !important;
+			}
+			
+			.has-cmsmasters-colors-link-color {
+				color: var(--cmsmasters-colors-link) !important;
+			}
+
+			.has-cmsmasters-colors-link-background-color {
+				background-color: var(--cmsmasters-colors-link) !important;
+			}
+			
+			.has-cmsmasters-colors-hover-color {
+				color: var(--cmsmasters-colors-hover) !important;
+			}
+
+			.has-cmsmasters-colors-hover-background-color {
+				background-color: var(--cmsmasters-colors-hover) !important;
+			}
+			
+			.has-cmsmasters-colors-heading-color {
+				color: var(--cmsmasters-colors-heading) !important;
+			}
+
+			.has-cmsmasters-colors-heading-background-color {
+				background-color: var(--cmsmasters-colors-heading) !important;
+			}
+			
+			.has-cmsmasters-colors-bg-color {
+				color: var(--cmsmasters-colors-bg) !important;
+			}
+
+			.has-cmsmasters-colors-bg-background-color {
+				background-color: var(--cmsmasters-colors-bg) !important;
+			}
+			
+			.has-cmsmasters-colors-alternate-color {
+				color: var(--cmsmasters-colors-alternate) !important;
+			}
+
+			.has-cmsmasters-colors-alternate-background-color {
+				background-color: var(--cmsmasters-colors-alternate) !important;
+			}
+			
+			.has-cmsmasters-colors-bd-color {
+				color: var(--cmsmasters-colors-bd) !important;
+			}
+
+			.has-cmsmasters-colors-bd-background-color {
+				background-color: var(--cmsmasters-colors-bd) !important;
+			}
+			
+</style>
+<style id="elementor-frontend-inline-css">
+.e-heading-base a, .e-paragraph-base a { all: unset; cursor: pointer; }form[data-element_type="e-form"].form-state-success [data-element_type="e-form-success-message"],form[data-element_type="e-form"].form-state-error [data-element_type="e-form-error-message"]{ display: block; }
+</style>
+
+<!-- ===== same CSS assets as the reference design ===== -->
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/themes/dentissimo/theme-config/assets/css/default-vars.min.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/cache/asset-cleanup/one/css/item/revslider__public__css__sr7-css-v17b844246147945dfa287d2700f129e9f8f3925a.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/plugins/cmsmasters-elementor-addon/assets/lib/cmsicons/css/cmsmasters-icons.min.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/cache/asset-cleanup/one/css/item/dentissimo__style-css-vb969920df35740430aaa88e0d6a3f62e6dce875c.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.50.0" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/uploads/elementor/css/dentissimo-frontend.min.css?ver=screen" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/uploads/elementor/css/dentissimo-gutenberg-wp-frontend.min.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/uploads/elementor/css/custom-frontend.min.css?ver=1788992672" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/uploads/elementor/css/post-9.css?ver=1788992672" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/uploads/elementor/css/cmsmasters-custom-frontend.min.css?ver=1788992672" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.1.4" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=4.1.4" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInUp.min.css?ver=4.1.4" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/plugins/elementor/assets/lib/animations/styles/fadeIn.min.css?ver=4.1.4" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInDown.min.css?ver=4.1.4" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/uploads/elementor/css/custom-widget-icon-box.min.css?ver=1788992672" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/uploads/elementor/css/custom-widget-image-gallery.min.css?ver=1788992672" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/plugins/elementor/assets/css/widget-nested-accordion.min.css?ver=4.1.4" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/uploads/elementor/css/post-32396.css?ver=1788992673" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/uploads/elementor/css/base-desktop.css?ver=6aa1dca1aa753" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/uploads/elementor/css/post-32421.css?ver=1788992673" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/uploads/elementor/css/post-32405.css?ver=1788992674" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=4.1.4" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/uploads/elementor/css/custom-pro-widget-nav-menu.min.css?ver=1788992672" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=4.1.4" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/uploads/elementor/css/custom-apple-webkit.min.css?ver=1788992672" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/uploads/elementor/css/post-25.css?ver=1788992674" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/uploads/elementor/css/post-68.css?ver=1788992674" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/uploads/elementor/cmsmasters-local-icons/Local-Icons/style.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" href="https://coremedical.com.br/wp-content/uploads/elementor/css/post-32398.css?ver=1788992674" type="text/css" media="all">
+
+<!-- ===== design-system documentation chrome (scaffold only) ===== -->
+<style>
+:root{ --ds-ink: var(--e-global-color-secondary,#222); --ds-muted: var(--e-global-color-text,#666B68);
+ --ds-line: var(--e-global-color-border,#DFE4E1); --ds-surface: var(--e-global-color-alternate,#F6F7F7);
+ --ds-bg: var(--e-global-color-background,#fff); --ds-brand: var(--e-global-color-primary,#04AEEE); }
+body.ds-body{ background:var(--ds-bg); color:var(--ds-muted); margin:0;
+ font-family:"Rethink Sans Local","Rethink Sans",system-ui,Arial,sans-serif; }
+.ds-nav{ position:sticky; top:0; z-index:9999; display:flex; gap:4px; flex-wrap:wrap; align-items:center;
+ padding:10px 20px; background:color-mix(in srgb, var(--ds-bg) 88%, transparent); backdrop-filter:blur(10px);
+ border-bottom:1px solid var(--ds-line); }
+.ds-nav strong{ color:var(--ds-ink); font-weight:700; margin-right:14px; letter-spacing:-.5px; }
+.ds-nav a{ color:var(--ds-muted); text-decoration:none; font-size:13px; font-weight:600; padding:7px 12px;
+ border-radius:999px; transition:background .2s ease,color .2s ease; }
+.ds-nav a:hover{ color:var(--ds-ink); background:var(--ds-surface); }
+.ds-nav a.is-active{ color:var(--ds-bg); background:var(--ds-brand); }
+.ds-section{ max-width:1280px; margin:0 auto; padding:76px 40px; border-bottom:1px solid var(--ds-line); }
+.ds-section:target{ scroll-margin-top:64px; }
+.ds-kicker{ font-size:12px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--ds-brand); margin:0 0 8px; }
+.ds-h{ font-family:inherit; font-weight:500; letter-spacing:-1px; color:var(--ds-ink); font-size:38px; line-height:1.15; margin:0 0 10px; }
+.ds-lead{ max-width:60ch; margin:0 0 34px; font-size:16px; line-height:1.6; }
+.ds-row{ display:flex; align-items:baseline; justify-content:space-between; gap:24px; padding:22px 0; border-top:1px solid var(--ds-line); }
+.ds-row:last-child{ border-bottom:1px solid var(--ds-line); }
+.ds-row__name{ flex:0 0 130px; font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--ds-muted); }
+.ds-row__demo{ flex:1 1 auto; min-width:0; color:var(--ds-ink); }
+.ds-row__demo p{ margin:0; }
+.ds-row__spec{ flex:0 0 auto; font-size:12px; font-variant-numeric:tabular-nums; color:var(--ds-muted); white-space:nowrap; padding-top:4px; }
+.ds-swatches{ display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:16px; }
+.ds-swatch{ border:1px solid var(--ds-line); border-radius:14px; overflow:hidden; background:var(--ds-bg); }
+.ds-swatch__chip{ height:92px; }
+.ds-swatch__meta{ padding:10px 12px; font-size:12px; }
+.ds-swatch__meta b{ display:block; color:var(--ds-ink); font-size:12px; letter-spacing:.4px; }
+.ds-swatch__meta code{ color:var(--ds-muted); font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+.ds-grid2{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:28px; align-items:start; }
+.ds-card{ border:1px solid var(--ds-line); border-radius:18px; padding:24px; background:var(--ds-bg); }
+.ds-card > h3{ margin:0 0 16px; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--ds-muted); }
+.ds-states{ display:flex; flex-wrap:wrap; gap:18px; align-items:center; }
+.ds-state{ display:flex; flex-direction:column; gap:8px; align-items:flex-start; }
+.ds-state > span{ font-size:11px; letter-spacing:1px; text-transform:uppercase; color:var(--ds-muted); }
+.ds-note{ font-size:13px; line-height:1.6; color:var(--ds-muted); border-left:3px solid var(--ds-brand); padding:4px 0 4px 14px; margin:22px 0 0; }
+.ds-iconset{ display:flex; flex-wrap:wrap; gap:26px; align-items:center; font-size:34px; color:var(--ds-ink); }
+.ds-iconset .e-font-icon-svg{ width:1em; height:1em; fill:currentColor; }
+.ds-iconsizes{ display:flex; gap:24px; align-items:baseline; color:var(--ds-brand); margin-top:20px; }
+.ds-iconsizes i, .ds-iconsizes .e-font-icon-svg{ display:inline-block; }
+.ds-iconsizes .e-font-icon-svg{ width:1em; height:1em; fill:currentColor; }
+.ds-motion-gallery{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:18px; margin-top:8px; }
+.ds-motion-cell{ border:1px solid var(--ds-line); border-radius:14px; padding:26px 18px; text-align:center; background:var(--ds-surface); font-size:13px; color:var(--ds-ink); }
+.ds-motion-cell button{ margin-top:14px; font:inherit; font-size:12px; font-weight:600; cursor:pointer; border:1px solid var(--ds-line); background:var(--ds-bg); color:var(--ds-muted); border-radius:999px; padding:6px 12px; }
+.ds-layoutbox{ border:1px dashed var(--ds-line); border-radius:14px; padding:16px; margin-top:10px; font-size:12px; color:var(--ds-muted); }
+@media(max-width:780px){ .ds-section{ padding:56px 20px; } .ds-row{ flex-wrap:wrap; } .ds-row__spec{ flex-basis:100%; } }
+</style>
+</head>
+
+<body class="ds-body home elementor-default elementor-kit-9 elementor-page elementor-page-32396">
+
+<nav class="ds-nav" aria-label="Design system sections">
+  <strong>Core Medical · Design System</strong>
+  <a href="#hero">Hero</a>
+  <a href="#typography">Typography</a>
+  <a href="#colors">Colors &amp; Surfaces</a>
+  <a href="#components">UI Components</a>
+  <a href="#layout">Layout &amp; Spacing</a>
+  <a href="#motion">Motion</a>
+  <a href="#icons">Icons</a>
+</nav>
+
+<!-- ============ 0 · HERO (exact clone, text adapted) ============ -->
+<section id="hero" class="ds-section" style="padding-left:0;padding-right:0;padding-top:0">
+  <div data-elementor-type="wp-page" data-elementor-id="32396" class="elementor elementor-32396" data-elementor-post-type="page">
+<div class="elementor-element elementor-element-4b54d03 e-con-full cmsmasters-bg-hide-tablet e-flex cmsmasters-bg-hide-none cmsmasters-block-default e-con e-parent" data-id="4b54d03" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-65b2bb2 e-con-full elementor-hidden-widescreen elementor-hidden-desktop e-flex cmsmasters-bg-hide-none cmsmasters-bg-hide-none cmsmasters-block-default e-con e-child" data-id="65b2bb2" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				</div>
+		<div class="elementor-element elementor-element-95f29d7 e-con-full e-flex cmsmasters-block-default e-con e-child" data-id="95f29d7" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="elementor-element elementor-element-4a811f7 elementor-absolute cmsmasters-effect cmsmasters-effect-type-floating logo-core-1 elementor-view-default cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-icon" data-id="4a811f7" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;cms_floating_translate_toggle&quot;:&quot;yes&quot;,&quot;cms_floating_translate_x&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;from&quot;:0,&quot;to&quot;:0}},&quot;cms_floating_translate_y&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;from&quot;:-25,&quot;to&quot;:20}},&quot;cms_floating_translate_delay&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;cms_floating_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.5,&quot;sizes&quot;:[]}}" data-widget_type="icon.default">
+							<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Camada_1" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve"><style type="text/css">	.st0{fill:#00ADEE;}</style><g>	<path class="st0" d="M312.8,596.2c-4.2,0.2-8.5,0.3-12.8,0.3C136.2,596.5,3.5,463.8,3.5,300c0-55.1,15-106.7,41.3-151  c26.4,3.9,50.1,7.7,71.3,11.5c-1.6,2.1-3.1,4.3-4.6,6.5c1.8-2.1,3.7-4.2,5.7-6.3c115.1,21.1,158.9,45.6,184,107.5  C366.8,430.2,322.7,569,312.8,596.2z"></path>	<path class="st0" d="M300,3.5C195,3.5,102.8,58,50.1,140.3c22.3,0.5,49.1,2,77.9,5.2C173.7,92,243.1,57.9,320.8,57.9  c137.8,0,249.6,107.4,249.6,239.8c0,114.8-84,210.7-196,234.2c99.4-29.2,171.6-116.5,171.6-219.5c0-127-109.5-230-244.7-230  c-65.5,0-125.1,24.2-169,63.7c91,10.6,200.1,39.1,247.3,112.5c38.1,66.7-16.6,272.7-64.7,337.6c156.9-7.7,281.7-137.3,281.7-296.1  C596.5,136.2,463.8,3.5,300,3.5z M352.6,187.8c-15.9,7-36.1-3.9-45-24.4c-9-20.4-9.6-46.1,6.3-53.1c15.9-7,42.3,7.3,51.3,27.8  C374.1,158.6,368.5,180.9,352.6,187.8z M379.5,238.9c0,0,78.3,48.9,127.2,117.4c-29.4-19.6-68.5-48.9-97.9-58.7  C399.1,278.1,379.5,238.9,379.5,238.9z"></path></g></svg>			</div>
+		</div>
+						</div>
+		<div class="elementor-element elementor-element-f3a6845 e-con-full e-flex cmsmasters-block-default e-con e-child" data-id="f3a6845" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-30e19f1 cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-heading" data-id="30e19f1" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h6 class="elementor-heading-title elementor-size-default">SISTEMA DE DESIGN VIVO</h6>				</div>
+				<div class="elementor-element elementor-element-443c010 elementor-widget__width-initial cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-heading" data-id="443c010" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h1 class="elementor-heading-title elementor-size-default">A identidade Core Medical documentada como sistema</h1>				</div>
+				<div class="elementor-element elementor-element-bc721f9 elementor-widget__width-initial cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-text-editor" data-id="bc721f9" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>Tipografia, cores, componentes e animações reais deste site, reunidos em um só lugar!</p>								</div>
+				</div>
+		<div class="elementor-element elementor-element-b646c49 e-flex e-con-boxed cmsmasters-block-default e-con e-child" data-id="b646c49" data-element_type="container" data-e-type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-9cf9a9b elementor-widget__width-initial elementor-hidden-mobile elementor-widget-divider--view-line cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-divider" data-id="9cf9a9b" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+		<div class="elementor-element elementor-element-3d2778a e-con-full e-flex cmsmasters-block-default elementor-invisible e-con e-child" data-id="3d2778a" data-element_type="container" data-e-type="container" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
+				<div class="elementor-element elementor-element-b0d03a2 cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-heading" data-id="b0d03a2" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<div class="elementor-heading-title elementor-size-default">Comece a explorar</div>				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+				</div>
+		
+  </div>
+</section>
+
+<!-- ============ 1 · TYPOGRAPHY ============ -->
+<section id="typography" class="ds-section">
+  <p class="ds-kicker">01 — Typography</p>
+  <h2 class="ds-h">Type ramp</h2>
+  <p class="ds-lead">The Elementor Kit type scale as rendered by the live theme — family <em>Rethink Sans</em>, weight 500 for headings. Each preview uses the original element and classes; specs are size / line-height.</p>
+  <div class="elementor elementor-32396">
+<div class="ds-row"><div class="ds-row__name">Heading 1</div>
+<div class="ds-row__demo"><div class="elementor-element elementor-widget elementor-widget-heading" data-element_type="widget" data-widget_type="heading.default"><h1 class="elementor-heading-title elementor-size-default">Sistema de Design Vivo</h1></div></div>
+<div class="ds-row__spec">68px / 75px</div></div>
+<div class="ds-row"><div class="ds-row__name">Heading 2</div>
+<div class="ds-row__demo"><div class="elementor-element elementor-widget elementor-widget-heading" data-element_type="widget" data-widget_type="heading.default"><h2 class="elementor-heading-title elementor-size-default">Ortopedia e Fisioterapia de Excelência</h2></div></div>
+<div class="ds-row__spec">56px / 64px</div></div>
+<div class="ds-row"><div class="ds-row__name">Heading 3</div>
+<div class="ds-row__demo"><div class="elementor-element elementor-widget elementor-widget-heading" data-element_type="widget" data-widget_type="heading.default"><h3 class="elementor-heading-title elementor-size-default">Agende sua consulta agora mesmo</h3></div></div>
+<div class="ds-row__spec">42px / 50px</div></div>
+<div class="ds-row"><div class="ds-row__name">Heading 5</div>
+<div class="ds-row__demo"><div class="elementor-element elementor-widget elementor-widget-heading" data-element_type="widget" data-widget_type="heading.default"><h5 class="elementor-heading-title elementor-size-default">Ortopedia especializada, documentada como um sistema reutilizável.</h5></div></div>
+<div class="ds-row__spec">21px / 30px</div></div>
+<div class="ds-row"><div class="ds-row__name">Heading 6</div>
+<div class="ds-row__demo"><div class="elementor-element elementor-widget elementor-widget-heading" data-element_type="widget" data-widget_type="heading.default"><h6 class="elementor-heading-title elementor-size-default">Bem-vindo a Core Medical</h6></div></div>
+<div class="ds-row__spec">13px / 20px · +3px</div></div>
+<div class="ds-row"><div class="ds-row__name">Paragraph</div>
+<div class="ds-row__demo"><div class="elementor-element elementor-widget elementor-widget-text-editor" data-element_type="widget" data-widget_type="text-editor.default"><p>Diagnóstico, tratamento e recuperação para patologias ortopédicas, tudo em um só lugar.</p></div></div><div class="ds-row__spec">17px / 28px</div></div>
+<div class="ds-row"><div class="ds-row__name">Paragraph L</div>
+<div class="ds-row__demo"><p class="has-medium-font-size">A fisioterapia ortopédica complementa a ortopedia, auxiliando na recuperação do aparelho locomotor.</p></div><div class="ds-row__spec">20px / 30px</div></div>
+<div class="ds-row"><div class="ds-row__name">Small</div>
+<div class="ds-row__demo"><p class="has-small-font-size">Rua Simas Pimenta, 98 — Tatuapé, São Paulo/SP</p></div><div class="ds-row__spec">15px / 26px</div></div>
+  </div>
+  <p class="ds-note">Only styles present in the reference are shown. Heading 4 exists in the kit but is not used on the page, so it is omitted.</p>
+</section>
+
+<!-- ============ 2 · COLORS & SURFACES ============ -->
+<section id="colors" class="ds-section">
+  <p class="ds-kicker">02 — Colors &amp; Surfaces</p>
+  <h2 class="ds-h">Palette &amp; surfaces</h2>
+  <p class="ds-lead">Global colors from the Elementor Kit (<code>--e-global-color-*</code>). These drive every widget, border and background in the design.</p>
+  <div class="ds-swatches">
+<div class="ds-swatch"><div class="ds-swatch__chip" style="background:#04AEEE"></div>
+<div class="ds-swatch__meta"><b>Primary</b><code>#04AEEE</code><br><code>--e-global-color-primary</code></div></div>
+<div class="ds-swatch"><div class="ds-swatch__chip" style="background:#222222"></div>
+<div class="ds-swatch__meta"><b>Secondary</b><code>#222222</code><br><code>--e-global-color-secondary</code></div></div>
+<div class="ds-swatch"><div class="ds-swatch__chip" style="background:#666B68"></div>
+<div class="ds-swatch__meta"><b>Text</b><code>#666B68</code><br><code>--e-global-color-text</code></div></div>
+<div class="ds-swatch"><div class="ds-swatch__chip" style="background:#CBF2FE"></div>
+<div class="ds-swatch__meta"><b>Accent</b><code>#CBF2FE</code><br><code>--e-global-color-accent</code></div></div>
+<div class="ds-swatch"><div class="ds-swatch__chip" style="background:#A5AEA8"></div>
+<div class="ds-swatch__meta"><b>Tertiary</b><code>#A5AEA8</code><br><code>--e-global-color-tertiary</code></div></div>
+<div class="ds-swatch"><div class="ds-swatch__chip" style="background:#FFFFFF"></div>
+<div class="ds-swatch__meta"><b>Background</b><code>#FFFFFF</code><br><code>--e-global-color-background</code></div></div>
+<div class="ds-swatch"><div class="ds-swatch__chip" style="background:#F6F7F7"></div>
+<div class="ds-swatch__meta"><b>Alternate</b><code>#F6F7F7</code><br><code>--e-global-color-alternate</code></div></div>
+<div class="ds-swatch"><div class="ds-swatch__chip" style="background:#DFE4E1"></div>
+<div class="ds-swatch__meta"><b>Border</b><code>#DFE4E1</code><br><code>--e-global-color-border</code></div></div>
+<div class="ds-swatch"><div class="ds-swatch__chip" style="background:#E7EAE9"></div>
+<div class="ds-swatch__meta"><b>Divider alt</b><code>#E7EAE9</code><br><code>--e-global-color-9f82f72</code></div></div>
+<div class="ds-swatch"><div class="ds-swatch__chip" style="background:#FFBC7D"></div>
+<div class="ds-swatch__meta"><b>Page transition</b><code>#FFBC7D</code><br><code>e-page-transition</code></div></div>
+  </div>
+  <div class="ds-grid2" style="margin-top:34px">
+    <div class="ds-card"><h3>Page / section background</h3>
+      <div class="ds-layoutbox" style="background:var(--e-global-color-background)">Background <code>#FFFFFF</code></div>
+      <div class="ds-layoutbox" style="background:var(--e-global-color-alternate)">Alternate surface <code>#F6F7F7</code></div>
+    </div>
+    <div class="ds-card"><h3>Card / hero surface</h3>
+      <div class="ds-layoutbox" style="border:1px solid var(--e-global-color-border);border-radius:40px">Border <code>1px solid #DFE4E1</code> · radius <code>40px</code> (cards <code>30px</code>)</div>
+    </div>
+    <div class="ds-card"><h3>Gradient (used)</h3>
+      <div class="ds-layoutbox" style="background:linear-gradient(180deg,var(--e-global-color-background) 0%,var(--e-global-color-alternate) 100%);border:1px solid var(--e-global-color-border)">linear-gradient(180deg, #FFFFFF 0%, #F6F7F7 100%)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 · UI COMPONENTS ============ -->
+<section id="components" class="ds-section">
+  <p class="ds-kicker">03 — UI Components</p>
+  <h2 class="ds-h">Components &amp; states</h2>
+  <p class="ds-lead">Every component below is lifted verbatim from the reference — same markup, same classes. Hover / focus the buttons to see the design's own transitions.</p>
+
+  <div class="elementor elementor-32421">
+  <div class="ds-grid2">
+    <div class="ds-card"><h3>Button — cmsmasters (with icon)</h3>
+      <div class="ds-states">
+        <div class="ds-state"><span>default</span><div class="elementor-element elementor-widget elementor-widget-cmsmasters-button"><div class="elementor-widget-container"><div class="elementor-widget-cmsmasters-button__button-container"><div class="elementor-widget-cmsmasters-button__button-container-inner"><a href="#components" class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view-default cmsmasters-icon-shape- cmsmasters-button-size-sm" role="button"><span class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-left"><span class="elementor-widget-cmsmasters-button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5.14284 1.83336C6.0902 2.5244 6.80675 3.4956 7.41687 4.38649L7.89483 5.09017C8.19918 5.53497 8.14893 6.13837 7.76253 6.52478L6.74522 7.54204L6.8529 7.76965C7.1152 8.30141 7.56795 9.06782 8.24988 9.74974C8.77443 10.2743 9.34898 10.6632 9.82824 10.9342L10.1032 11.0828L10.3483 11.2039C10.3863 11.2218 10.4227 11.2386 10.4575 11.2544L11.4744 10.2376C11.8611 9.85084 12.4671 9.79984 12.9129 10.1088L13.6734 10.636C14.5371 11.2436 15.4391 11.9362 16.1406 12.8346C16.3968 13.1627 16.4349 13.5918 16.2821 13.9483C15.6545 15.4127 14.0663 16.6599 12.4142 16.599L12.1888 16.5865L12.0141 16.5714L11.8207 16.5498L11.6096 16.5205L11.3813 16.4825L11.1369 16.4348L10.877 16.3764L10.6024 16.3062L10.314 16.2231L10.0126 16.1261C8.62782 15.657 6.87071 14.7345 5.06789 12.9317C3.26506 11.1288 2.34262 9.37175 1.87348 7.98702L1.77652 7.68557L1.69344 7.39717L1.62319 7.12262L1.56475 6.86272C1.54712 6.77862 1.53128 6.69709 1.51707 6.61827L1.4791 6.39005L1.4498 6.17888L1.42814 5.98554L1.41306 5.81083L1.40053 5.58545C1.33994 3.93885 2.60129 2.33896 4.05899 1.71423C4.40104 1.56764 4.81533 1.59446 5.14284 1.83336ZM4.44639 3.18959C3.64283 3.60996 2.86418 4.56997 2.89952 5.53029L2.91506 5.77659L2.93052 5.9298L2.95262 6.10195L2.98247 6.2922L3.0212 6.49973L3.06993 6.72371L3.1298 6.96333L3.20192 7.21774L3.28742 7.48614C3.31828 7.57784 3.35155 7.67173 3.38743 7.76768L3.50307 8.06154L3.63547 8.36691C4.10597 9.40302 4.87449 10.617 6.12856 11.871C7.38263 13.1251 8.5966 13.8936 9.63271 14.3641L9.93808 14.4965L10.2319 14.6122C10.3279 14.648 10.4218 14.6813 10.5135 14.7122L10.7819 14.7977L11.0363 14.8698L11.2759 14.9297L11.4999 14.9784L11.7074 15.0171L11.8977 15.047L12.0698 15.0691L12.223 15.0845L12.4693 15.1001C13.4177 15.135 14.385 14.3609 14.8032 13.5676C14.2693 12.9412 13.6064 12.4272 12.875 11.9095L12.3145 11.5187L12.1714 11.6679L11.8675 12.0003L11.706 12.1702C11.2663 12.6178 10.7537 12.9983 10.1388 12.7496L9.96904 12.6785L9.76214 12.5857C9.72483 12.5684 9.68618 12.5501 9.64628 12.5309L9.39279 12.4041L9.11428 12.2536C8.53548 11.9285 7.83568 11.4568 7.18922 10.8104C6.54277 10.1639 6.07106 9.46414 5.74595 8.88534L5.59549 8.60683L5.46867 8.35334L5.32109 8.03058L5.24999 7.86079C5.01664 7.28383 5.33736 6.79662 5.74783 6.37523L5.91571 6.21013L6.33395 5.82585L6.48334 5.68263L6.1289 5.16332C5.60187 4.39903 5.08575 3.70811 4.44639 3.18959ZM11.2437 4.52938L11.3307 4.5396C11.8766 4.63586 12.378 4.90248 12.7632 5.30124C13.1482 5.7 13.3971 6.21044 13.4743 6.75939C13.532 7.16957 13.2462 7.54879 12.836 7.60646C12.4551 7.66002 12.1009 7.41741 12.0061 7.05406L11.9889 6.96815C11.9559 6.73289 11.8491 6.51413 11.6841 6.34323C11.5466 6.20081 11.3744 6.09773 11.1854 6.04345L11.0702 6.01681C10.6623 5.94489 10.3899 5.55589 10.4619 5.14797C10.5286 4.76918 10.8688 4.50727 11.2437 4.52938ZM11.2499 2.24973C11.8408 2.24973 12.426 2.36612 12.972 2.59227C13.518 2.81842 14.014 3.14989 14.4319 3.56775C14.8497 3.98561 15.1812 4.48169 15.4074 5.02766C15.6335 5.57362 15.7499 6.15879 15.7499 6.74973C15.7499 7.16394 15.4141 7.49973 14.9999 7.49973C14.6152 7.49973 14.2982 7.2102 14.2549 6.8372L14.2499 6.74973C14.2499 6.35577 14.1723 5.96566 14.0215 5.60169C13.8708 5.2377 13.6498 4.90699 13.3712 4.62841C13.0926 4.34984 12.762 4.12886 12.3979 3.97809C12.0946 3.85245 11.7732 3.77763 11.4464 3.75618L11.2499 3.74973C10.8357 3.74973 10.4999 3.41394 10.4999 2.99973C10.4999 2.58552 10.8357 2.24973 11.2499 2.24973Z" fill="currentColor"></path></svg></span><span class="elementor-widget-cmsmasters-button__text">(11) 2296-4344</span></span></a></div></div></div></div></div>
+        <div class="ds-state"><span>hover / focus</span><div class="elementor-element elementor-widget elementor-widget-cmsmasters-button" style="--dummy:0"><div class="elementor-widget-container"><div class="elementor-widget-cmsmasters-button__button-container"><div class="elementor-widget-cmsmasters-button__button-container-inner"><a href="#components" style="--force-hover:1" class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view-default cmsmasters-icon-shape- cmsmasters-button-size-sm" role="button"><span class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-left"><span class="elementor-widget-cmsmasters-button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5.14284 1.83336C6.0902 2.5244 6.80675 3.4956 7.41687 4.38649L7.89483 5.09017C8.19918 5.53497 8.14893 6.13837 7.76253 6.52478L6.74522 7.54204L6.8529 7.76965C7.1152 8.30141 7.56795 9.06782 8.24988 9.74974C8.77443 10.2743 9.34898 10.6632 9.82824 10.9342L10.1032 11.0828L10.3483 11.2039C10.3863 11.2218 10.4227 11.2386 10.4575 11.2544L11.4744 10.2376C11.8611 9.85084 12.4671 9.79984 12.9129 10.1088L13.6734 10.636C14.5371 11.2436 15.4391 11.9362 16.1406 12.8346C16.3968 13.1627 16.4349 13.5918 16.2821 13.9483C15.6545 15.4127 14.0663 16.6599 12.4142 16.599L12.1888 16.5865L12.0141 16.5714L11.8207 16.5498L11.6096 16.5205L11.3813 16.4825L11.1369 16.4348L10.877 16.3764L10.6024 16.3062L10.314 16.2231L10.0126 16.1261C8.62782 15.657 6.87071 14.7345 5.06789 12.9317C3.26506 11.1288 2.34262 9.37175 1.87348 7.98702L1.77652 7.68557L1.69344 7.39717L1.62319 7.12262L1.56475 6.86272C1.54712 6.77862 1.53128 6.69709 1.51707 6.61827L1.4791 6.39005L1.4498 6.17888L1.42814 5.98554L1.41306 5.81083L1.40053 5.58545C1.33994 3.93885 2.60129 2.33896 4.05899 1.71423C4.40104 1.56764 4.81533 1.59446 5.14284 1.83336ZM4.44639 3.18959C3.64283 3.60996 2.86418 4.56997 2.89952 5.53029L2.91506 5.77659L2.93052 5.9298L2.95262 6.10195L2.98247 6.2922L3.0212 6.49973L3.06993 6.72371L3.1298 6.96333L3.20192 7.21774L3.28742 7.48614C3.31828 7.57784 3.35155 7.67173 3.38743 7.76768L3.50307 8.06154L3.63547 8.36691C4.10597 9.40302 4.87449 10.617 6.12856 11.871C7.38263 13.1251 8.5966 13.8936 9.63271 14.3641L9.93808 14.4965L10.2319 14.6122C10.3279 14.648 10.4218 14.6813 10.5135 14.7122L10.7819 14.7977L11.0363 14.8698L11.2759 14.9297L11.4999 14.9784L11.7074 15.0171L11.8977 15.047L12.0698 15.0691L12.223 15.0845L12.4693 15.1001C13.4177 15.135 14.385 14.3609 14.8032 13.5676C14.2693 12.9412 13.6064 12.4272 12.875 11.9095L12.3145 11.5187L12.1714 11.6679L11.8675 12.0003L11.706 12.1702C11.2663 12.6178 10.7537 12.9983 10.1388 12.7496L9.96904 12.6785L9.76214 12.5857C9.72483 12.5684 9.68618 12.5501 9.64628 12.5309L9.39279 12.4041L9.11428 12.2536C8.53548 11.9285 7.83568 11.4568 7.18922 10.8104C6.54277 10.1639 6.07106 9.46414 5.74595 8.88534L5.59549 8.60683L5.46867 8.35334L5.32109 8.03058L5.24999 7.86079C5.01664 7.28383 5.33736 6.79662 5.74783 6.37523L5.91571 6.21013L6.33395 5.82585L6.48334 5.68263L6.1289 5.16332C5.60187 4.39903 5.08575 3.70811 4.44639 3.18959ZM11.2437 4.52938L11.3307 4.5396C11.8766 4.63586 12.378 4.90248 12.7632 5.30124C13.1482 5.7 13.3971 6.21044 13.4743 6.75939C13.532 7.16957 13.2462 7.54879 12.836 7.60646C12.4551 7.66002 12.1009 7.41741 12.0061 7.05406L11.9889 6.96815C11.9559 6.73289 11.8491 6.51413 11.6841 6.34323C11.5466 6.20081 11.3744 6.09773 11.1854 6.04345L11.0702 6.01681C10.6623 5.94489 10.3899 5.55589 10.4619 5.14797C10.5286 4.76918 10.8688 4.50727 11.2437 4.52938ZM11.2499 2.24973C11.8408 2.24973 12.426 2.36612 12.972 2.59227C13.518 2.81842 14.014 3.14989 14.4319 3.56775C14.8497 3.98561 15.1812 4.48169 15.4074 5.02766C15.6335 5.57362 15.7499 6.15879 15.7499 6.74973C15.7499 7.16394 15.4141 7.49973 14.9999 7.49973C14.6152 7.49973 14.2982 7.2102 14.2549 6.8372L14.2499 6.74973C14.2499 6.35577 14.1723 5.96566 14.0215 5.60169C13.8708 5.2377 13.6498 4.90699 13.3712 4.62841C13.0926 4.34984 12.762 4.12886 12.3979 3.97809C12.0946 3.85245 11.7732 3.77763 11.4464 3.75618L11.2499 3.74973C10.8357 3.74973 10.4999 3.41394 10.4999 2.99973C10.4999 2.58552 10.8357 2.24973 11.2499 2.24973Z" fill="currentColor"></path></svg></span><span class="elementor-widget-cmsmasters-button__text">(11) 2296-4344</span></span></a></div></div></div></div></div>
+      </div>
+    </div>
+    <div class="ds-card"><h3>Button — cmsmasters (text)</h3>
+      <div class="elementor-element elementor-widget elementor-widget-cmsmasters-button"><div class="elementor-widget-container"><div class="elementor-widget-cmsmasters-button__button-container"><div class="elementor-widget-cmsmasters-button__button-container-inner"><a href="#components" class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm" role="button"><span class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-"><span class="elementor-widget-cmsmasters-button__text">Agendar Consulta</span></span></a></div></div></div></div>
+    </div>
+    <div class="ds-card"><h3>Button — cmsmasters (chevron)</h3>
+      <div class="elementor-element elementor-widget elementor-widget-cmsmasters-button"><div class="elementor-widget-container"><div class="elementor-widget-cmsmasters-button__button-container"><div class="elementor-widget-cmsmasters-button__button-container-inner"><a href="#hero" class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view-default cmsmasters-icon-shape- cmsmasters-button-size-sm" role="button"><span class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-right"><span class="elementor-widget-cmsmasters-button__icon"><i aria-hidden="true" class="cmsmsdemo-icon- cmsms-demo-icon-chevron-up"></i></span><span class="elementor-widget-cmsmasters-button__text">Voltar ao topo</span></span></a></div></div></div></div>
+    </div>
+    <div class="ds-card"><h3>Button — Elementor core</h3>
+      <div class="elementor-element elementor-align-justify elementor-widget elementor-widget-button" data-widget_type="button.default"><a class="elementor-button elementor-button-link elementor-size-sm" href="#components"><span class="elementor-button-content-wrapper"><span class="elementor-button-text">Agendar Consulta</span></span></a></div>
+      <p class="ds-note" style="margin-top:14px">States: default / <b>hover</b> / <b>:focus-visible</b> / <b>:active</b> are all defined in the original CSS — interact to see them.</p>
+    </div>
+  </div>
+  </div>
+
+  <div class="elementor elementor-32396">
+  <div class="ds-grid2" style="margin-top:28px">
+    <div class="ds-card"><h3>Icon box</h3>
+      <div class="elementor-element elementor-widget elementor-widget-icon-box" data-widget_type="icon-box.default"><div class="elementor-element elementor-element-edcd70d elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-view-default elementor-position-block-start elementor-mobile-position-block-start cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-icon-box" data-id="edcd70d" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" id="Camada_2" data-name="Camada 2" viewBox="0 0 567 567"><defs><style>      .cls-1 {        fill: #fff;      }    </style></defs><g id="Layer_1" data-name="Layer 1"><g><path class="cls-1" d="m296.32,566.71c-4.25.19-8.52.29-12.82.29C126.93,567,0,440.07,0,283.5c0-52.48,14.26-101.64,39.13-143.8,25.86,3.79,48.99,7.47,69.7,11.25-1.48,2.04-2.93,4.11-4.34,6.2,1.76-2.03,3.56-4.03,5.39-6,109.77,20.16,151.56,43.44,175.48,102.5,62.8,155.09,20.13,288,10.96,313.06Z"></path><path class="cls-1" d="m283.5,0C182.8,0,94.37,52.5,44.08,131.63c21.62.48,47.86,1.84,76.07,4.97,43.58-51.05,109.77-83.6,183.87-83.6,131.4,0,237.98,102.38,237.98,228.65,0,109.47-80.07,200.92-186.93,223.32,94.82-27.81,163.6-111.05,163.6-209.32,0-121.14-104.43-219.32-233.31-219.32-62.52,0-119.28,23.08-161.15,60.73,86.81,10.1,190.79,37.24,235.81,107.26,36.43,63.74-16.01,260.78-61.93,322.31,149.79-7.59,268.91-131.45,268.91-283.13S440.07,0,283.5,0Zm50.9,176.96c-15.17,6.65-34.4-3.75-42.96-23.25-8.56-19.49-9.13-43.95,6.04-50.61,15.16-6.65,40.31,7.01,48.87,26.5,8.56,19.5,3.21,40.7-11.95,47.36Zm25.62,48.69s74.66,46.66,121.32,111.99c-28-18.66-65.33-46.66-93.33-55.99-9.33-18.67-27.99-56-27.99-56Z"></path></g></g></svg>				</span>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<span>
+							Trabalhamos com ampla rede credenciada de convênios em São Paulo.						</span>
+					</h3>
+				
+				
+			</div>
+			
+		</div>
+						</div></div>
+    </div>
+    <div class="ds-card"><h3>Icon list (contact)</h3>
+      <div class="elementor-element elementor-element-6d2641f0 cmsmasters-widget-align-left cmsmasters-widget-layout-row cmsmasters-widget-direction-default cmsmasters-widget-marker-element-icon cmsmasters-widget-marker-view-default cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-cmsmasters-icon-list cmsmasters-widget-icon-list" data-id="6d2641f0" data-element_type="widget" data-e-type="widget" data-widget_type="cmsmasters-icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="cmsmasters-widget-icon-list-items">
+							<li class="cmsmasters-widget-icon-list-item active-icon-item">
+								<span class="cmsmasters-widget-icon-list-item-text-wrap">
+											<span class="cmsmasters-widget-icon-list-item-icon">
+							<span>
+																	<svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>															</span>
+						</span>
+										<span class="cmsmasters-widget-icon-list-item-text-inner active-link-item">
+						<span class="cmsmasters-widget-icon-list-item-text">
+							<a href="https://wa.me/+5511934497715">(11) 93449-7715</a>						</span>
+											</span>
+				</span>
+								</li>
+							<li class="cmsmasters-widget-icon-list-item active-icon-item">
+								<span class="cmsmasters-widget-icon-list-item-text-wrap">
+											<span class="cmsmasters-widget-icon-list-item-icon">
+							<span>
+																	<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5.14284 1.83336C6.0902 2.5244 6.80675 3.4956 7.41687 4.38649L7.89483 5.09017C8.19918 5.53497 8.14893 6.13837 7.76253 6.52478L6.74522 7.54204L6.8529 7.76965C7.1152 8.30141 7.56795 9.06782 8.24988 9.74974C8.77443 10.2743 9.34898 10.6632 9.82824 10.9342L10.1032 11.0828L10.3483 11.2039C10.3863 11.2218 10.4227 11.2386 10.4575 11.2544L11.4744 10.2376C11.8611 9.85084 12.4671 9.79984 12.9129 10.1088L13.6734 10.636C14.5371 11.2436 15.4391 11.9362 16.1406 12.8346C16.3968 13.1627 16.4349 13.5918 16.2821 13.9483C15.6545 15.4127 14.0663 16.6599 12.4142 16.599L12.1888 16.5865L12.0141 16.5714L11.8207 16.5498L11.6096 16.5205L11.3813 16.4825L11.1369 16.4348L10.877 16.3764L10.6024 16.3062L10.314 16.2231L10.0126 16.1261C8.62782 15.657 6.87071 14.7345 5.06789 12.9317C3.26506 11.1288 2.34262 9.37175 1.87348 7.98702L1.77652 7.68557L1.69344 7.39717L1.62319 7.12262L1.56475 6.86272C1.54712 6.77862 1.53128 6.69709 1.51707 6.61827L1.4791 6.39005L1.4498 6.17888L1.42814 5.98554L1.41306 5.81083L1.40053 5.58545C1.33994 3.93885 2.60129 2.33896 4.05899 1.71423C4.40104 1.56764 4.81533 1.59446 5.14284 1.83336ZM4.44639 3.18959C3.64283 3.60996 2.86418 4.56997 2.89952 5.53029L2.91506 5.77659L2.93052 5.9298L2.95262 6.10195L2.98247 6.2922L3.0212 6.49973L3.06993 6.72371L3.1298 6.96333L3.20192 7.21774L3.28742 7.48614C3.31828 7.57784 3.35155 7.67173 3.38743 7.76768L3.50307 8.06154L3.63547 8.36691C4.10597 9.40302 4.87449 10.617 6.12856 11.871C7.38263 13.1251 8.5966 13.8936 9.63271 14.3641L9.93808 14.4965L10.2319 14.6122C10.3279 14.648 10.4218 14.6813 10.5135 14.7122L10.7819 14.7977L11.0363 14.8698L11.2759 14.9297L11.4999 14.9784L11.7074 15.0171L11.8977 15.047L12.0698 15.0691L12.223 15.0845L12.4693 15.1001C13.4177 15.135 14.385 14.3609 14.8032 13.5676C14.2693 12.9412 13.6064 12.4272 12.875 11.9095L12.3145 11.5187L12.1714 11.6679L11.8675 12.0003L11.706 12.1702C11.2663 12.6178 10.7537 12.9983 10.1388 12.7496L9.96904 12.6785L9.76214 12.5857C9.72483 12.5684 9.68618 12.5501 9.64628 12.5309L9.39279 12.4041L9.11428 12.2536C8.53548 11.9285 7.83568 11.4568 7.18922 10.8104C6.54277 10.1639 6.07106 9.46414 5.74595 8.88534L5.59549 8.60683L5.46867 8.35334L5.32109 8.03058L5.24999 7.86079C5.01664 7.28383 5.33736 6.79662 5.74783 6.37523L5.91571 6.21013L6.33395 5.82585L6.48334 5.68263L6.1289 5.16332C5.60187 4.39903 5.08575 3.70811 4.44639 3.18959ZM11.2437 4.52938L11.3307 4.5396C11.8766 4.63586 12.378 4.90248 12.7632 5.30124C13.1482 5.7 13.3971 6.21044 13.4743 6.75939C13.532 7.16957 13.2462 7.54879 12.836 7.60646C12.4551 7.66002 12.1009 7.41741 12.0061 7.05406L11.9889 6.96815C11.9559 6.73289 11.8491 6.51413 11.6841 6.34323C11.5466 6.20081 11.3744 6.09773 11.1854 6.04345L11.0702 6.01681C10.6623 5.94489 10.3899 5.55589 10.4619 5.14797C10.5286 4.76918 10.8688 4.50727 11.2437 4.52938ZM11.2499 2.24973C11.8408 2.24973 12.426 2.36612 12.972 2.59227C13.518 2.81842 14.014 3.14989 14.4319 3.56775C14.8497 3.98561 15.1812 4.48169 15.4074 5.02766C15.6335 5.57362 15.7499 6.15879 15.7499 6.74973C15.7499 7.16394 15.4141 7.49973 14.9999 7.49973C14.6152 7.49973 14.2982 7.2102 14.2549 6.8372L14.2499 6.74973C14.2499 6.35577 14.1723 5.96566 14.0215 5.60169C13.8708 5.2377 13.6498 4.90699 13.3712 4.62841C13.0926 4.34984 12.762 4.12886 12.3979 3.97809C12.0946 3.85245 11.7732 3.77763 11.4464 3.75618L11.2499 3.74973C10.8357 3.74973 10.4999 3.41394 10.4999 2.99973C10.4999 2.58552 10.8357 2.24973 11.2499 2.24973Z" fill="currentColor"></path></svg>															</span>
+						</span>
+										<span class="cmsmasters-widget-icon-list-item-text-inner active-link-item">
+						<span class="cmsmasters-widget-icon-list-item-text cmsmasters-widget-icon-list-item-text">
+							<a href="index.html">(11) 2296-4344</a>						</span>
+											</span>
+				</span>
+								</li>
+							<li class="cmsmasters-widget-icon-list-item active-icon-item">
+								<span class="cmsmasters-widget-icon-list-item-text-wrap">
+											<span class="cmsmasters-widget-icon-list-item-icon">
+							<span>
+																	<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 9C1.5 4.85787 4.85787 1.5 9 1.5C13.1422 1.5 16.5 4.85787 16.5 9V10.125C16.5 11.5747 15.3247 12.75 13.875 12.75C12.9718 12.75 12.1752 12.2939 11.7029 11.5994C11.0206 12.3087 10.0618 12.75 9 12.75C6.92893 12.75 5.25 11.071 5.25 9C5.25 6.92893 6.92893 5.25 9 5.25C11.071 5.25 12.75 6.92893 12.75 9V10.125C12.75 10.7463 13.2537 11.25 13.875 11.25C14.4963 11.25 15 10.7463 15 10.125V9C15 5.68629 12.3137 3 9 3C5.68629 3 3 5.68629 3 9C3 12.3137 5.68629 15 9 15H12C12.4142 15 12.75 15.3358 12.75 15.75C12.75 16.1642 12.4142 16.5 12 16.5H9C4.85787 16.5 1.5 13.1422 1.5 9ZM11.25 9C11.25 7.75736 10.2426 6.75 9 6.75C7.75736 6.75 6.75 7.75736 6.75 9C6.75 10.2426 7.75736 11.25 9 11.25C10.2426 11.25 11.25 10.2426 11.25 9Z" fill="currentColor"></path></svg>															</span>
+						</span>
+										<span class="cmsmasters-widget-icon-list-item-text-inner active-link-item">
+						<span class="cmsmasters-widget-icon-list-item-text cmsmasters-widget-icon-list-item-text cmsmasters-widget-icon-list-item-text">
+							<a href="mailto:contato@coremedical.com.br">contato@coremedical.com.br</a>						</span>
+											</span>
+				</span>
+								</li>
+					</ul>
+						</div>
+				</div>
+		<div class="elementor-element elementor-element-4585751a e-flex e-con-boxed cmsmasters-block-default e-con e-child" data-id="4585751a" data-element_type="container" data-e-type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-a017a89 cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-cmsmasters-button" data-id="a017a89" data-element_type="widget" data-e-type="widget" data-widget_type="cmsmasters-button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-widget-cmsmasters-button__button-container"><div class="elementor-widget-cmsmasters-button__button-container-inner"><a href="agendar-consulta/index.html" class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm" role="button"><span class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-"><span class="elementor-widget-cmsmasters-button__text">Agendar Consulta</span></span></a></div></div>				</div>
+				</div></div></div>
+    </div>
+    <div class="ds-card"><h3>Social icons</h3>
+      <div class="elementor-element elementor-shape-circle elementor-grid-0 elementor-widget elementor-widget-social-icons" data-widget_type="social-icons.default"><div class="elementor-social-icons-wrapper elementor-grid" role="list"><span class="elementor-grid-item" role="listitem"><a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-72adf3b" href="https://www.facebook.com/Core-Medical-Ortopedia-Regenerativa-107925258471766" target="_blank"><span class="elementor-screen-only">Facebook-f</span><svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook-f" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></a></span><span class="elementor-grid-item" role="listitem"><a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-75928fb" href="https://www.instagram.com/coremedicalsp/" target="_blank"><span class="elementor-screen-only">Instagram</span><svg aria-hidden="true" class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a></span></div></div>
+    </div>
+    <div class="ds-card"><h3>Divider</h3>
+      <div class="elementor-element elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-widget_type="divider.default"><div class="elementor-divider"><span class="elementor-divider-separator"></span></div></div>
+    </div>
+    <div class="ds-card"><h3>Image</h3>
+      <div class="elementor-element elementor-element-16ffef4 cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-image" data-id="16ffef4" data-element_type="widget" data-e-type="widget" data-widget_type="image.default"><img width="200" height="100" src="https://coremedical.com.br/wp-content/uploads/2024/12/logo_core-medical_completo_200x150.webp" class="attachment-full size-full wp-image-47 cmsmasters_img" alt=""></div>
+    </div>
+    <div class="ds-card"><h3>Link title</h3>
+      <div class="elementor-element elementor-element-12b10117 cmsmasters-line-clamp-no cmsmasters-color-variation-default cmsmasters-pointer-none cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-cmsmasters-title cmsmasters-widget-title" data-id="12b10117" data-element_type="widget" data-e-type="widget" data-widget_type="cmsmasters-title.default"><div class="elementor-widget-container"><p class="cmsmasters-widget-title__heading"><a href="#hero" class="">Core Medical Design</a></p></div></div>
+    </div>
+  </div>
+  </div>
+
+  <div class="elementor elementor-32396" style="margin-top:28px">
+    <div class="ds-card"><h3>Accordion (nested)</h3>
+<div class="elementor-element elementor-element-df40dab elementor-widget__width-inherit cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-n-accordion" data-id="df40dab" data-element_type="widget" data-e-type="widget" data-settings="{&quot;default_state&quot;:&quot;all_collapsed&quot;,&quot;max_items_expended&quot;:&quot;one&quot;,&quot;n_accordion_animation_duration&quot;:{&quot;unit&quot;:&quot;ms&quot;,&quot;size&quot;:400,&quot;sizes&quot;:[]}}" data-widget_type="nested-accordion.default">
+							<div class="e-n-accordion" aria-label="Accordion. Open links with Enter or Space, close with Escape, and navigate with Arrow Keys">
+						<details id="e-n-accordion-item-2340" class="e-n-accordion-item">
+				<summary class="e-n-accordion-item-title" data-accordion-index="1" tabindex="0" aria-expanded="false" aria-controls="e-n-accordion-item-2340">
+					<span class="e-n-accordion-item-title-header"><div class="e-n-accordion-item-title-text"> Onde fica localizada a Core Medical? </div></span>
+							<span class="e-n-accordion-item-title-icon">
+			<span class="e-opened"><svg aria-hidden="true" class="e-font-icon-svg e-fas-minus" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></span>
+			<span class="e-closed"><svg aria-hidden="true" class="e-font-icon-svg e-fas-plus" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></span>
+		</span>
+
+						</summary>
+				<div role="region" aria-labelledby="e-n-accordion-item-2340" class="elementor-element elementor-element-91f5466 e-con-full e-flex cmsmasters-block-default e-con e-child" data-id="91f5466" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-30a81e0 cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-text-editor" data-id="30a81e0" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>Estamos localizados no bairro do Tatuapé, na Zona Leste de São Paulo.</p><p>A clica fica a uma distância de 5 minutos a pé do Metrô Tatuapé da Linha 3-Vermelha e conta com muitas opções de transporte público.</p><p>Endereço: Rua Simas Pimenta, 98 Tatuapé – São Paulo/SP</p><p>É muito fácil chegar na Core Medical! Agende sua consulta.</p>								</div>
+				</div>
+					</details>
+						<details id="e-n-accordion-item-2341" class="e-n-accordion-item">
+				<summary class="e-n-accordion-item-title" data-accordion-index="2" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-2341">
+					<span class="e-n-accordion-item-title-header"><div class="e-n-accordion-item-title-text"> Dor nas costas e lombalgia é a mesma coisa? </div></span>
+							<span class="e-n-accordion-item-title-icon">
+			<span class="e-opened"><svg aria-hidden="true" class="e-font-icon-svg e-fas-minus" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></span>
+			<span class="e-closed"><svg aria-hidden="true" class="e-font-icon-svg e-fas-plus" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></span>
+		</span>
+
+						</summary>
+				<div role="region" aria-labelledby="e-n-accordion-item-2341" class="elementor-element elementor-element-2c1b732 e-con-full e-flex cmsmasters-block-default e-con e-child" data-id="2c1b732" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-3f01516 cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-text-editor" data-id="3f01516" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>Não!</p><p>Dor nas costas ou na coluna é um termo genérico que indica quadros dolorosos na região da coluna vertebral.</p><p>A coluna é dividida em quatro áreas: a cervical, que é a região do pescoço; a dorsal, que é a região do meio das costas; a lombar que começa na altura dos rins e termina na região sacrococcigiana, onde temos o último osso que compõe a nossa coluna, o cóccix.</p><p>Assim, a lombalgia é a dor que atinge a região lombar da coluna vertebral, assim como a cervicalgia atinge a região do pescoço e assim por diante.</p><p>Está com dor? Agende sua consulta aqui na Core Medical.</p>								</div>
+				</div>
+					</details>
+						<details id="e-n-accordion-item-2342" class="e-n-accordion-item">
+				<summary class="e-n-accordion-item-title" data-accordion-index="3" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-2342">
+					<span class="e-n-accordion-item-title-header"><div class="e-n-accordion-item-title-text"> Jogar futebol com frequência prejudica o joelho? </div></span>
+							<span class="e-n-accordion-item-title-icon">
+			<span class="e-opened"><svg aria-hidden="true" class="e-font-icon-svg e-fas-minus" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></span>
+			<span class="e-closed"><svg aria-hidden="true" class="e-font-icon-svg e-fas-plus" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></span>
+		</span>
+
+						</summary>
+				<div role="region" aria-labelledby="e-n-accordion-item-2342" class="elementor-element elementor-element-c731496 e-con-full e-flex cmsmasters-block-default e-con e-child" data-id="c731496" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-8423e45 cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-text-editor" data-id="8423e45" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>Maior articulação do corpo humano, o joelho exerce uma função importantíssima para os jogadores de futebol: é ele o grande responsável por sua mobilidade. Porém, é o joelho também um dos grandes causadores do afastamento dos atletas dos campos.</p><p>Os problemas mais comuns na articulação dos jogadores podem ter como causas principais, sobrecarga ou trauma.</p><p>A alta intensidade do esporte e as mudanças repentinas de movimento são alguns dos motivos para a maior frequência de lesões.</p><p>Fortalecer a musculatura das pernas ajuda a diminuir a pressão no joelho e aumenta a resposta muscular. Por isso separamos algumas dicas para quem joga futebol com frequência:</p><p>1️⃣ Prefira atividades físicas de baixa impacto;</p><p>2️⃣Mantenha um peso ideal;</p><p>3️⃣Faça fortalecimento;</p><p>4️⃣Faça repouso;</p><p>5️⃣Procure um especialista.</p>								</div>
+				</div>
+					</details>
+</div>
+</div>
+    </div>
+  </div>
+
+  <div class="elementor elementor-32396" style="margin-top:28px">
+    <div class="ds-card"><h3>Image gallery — partner logos</h3>
+<div class="elementor-element elementor-element-7435b74 gallery-spacing-custom elementor-widget__width-initial cmsmasters-block-default cmsmasters-sticky-default elementor-widget elementor-widget-image-gallery" data-id="7435b74" data-element_type="widget" data-e-type="widget" data-widget_type="image-gallery.default">
+							<div class="elementor-image-gallery">
+			<div id="gallery-1" class="gallery galleryid-32396 gallery-columns-5 gallery-size-full"><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img decoding="async" width="240" height="62" src="https://coremedical.com.br/wp-content/uploads/2024/12/allianz-logo-240x62-1.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="240" height="91" src="https://coremedical.com.br/wp-content/uploads/2024/12/amafresp-logo-destacada-240x151-1.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="240" height="85" src="https://coremedical.com.br/wp-content/uploads/2024/12/amil-logo-1-2-240x85-1.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="320" height="132" src="https://coremedical.com.br/wp-content/uploads/2024/12/box-gama-saude-320x188-1.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="480" height="171" src="https://coremedical.com.br/wp-content/uploads/2024/12/bradesco-saude-logo-1-1-480x171-1.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="300" height="92" src="https://coremedical.com.br/wp-content/uploads/2024/12/convenio-medico-metrus-3-300x300-1.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="240" height="120" src="https://coremedical.com.br/wp-content/uploads/2024/12/download-1-240x120-1.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="480" height="242" src="https://coremedical.com.br/wp-content/uploads/2024/12/logo_cabesp.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="454" height="111" src="https://coremedical.com.br/wp-content/uploads/2024/12/download-454x111-1.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="480" height="141" src="https://coremedical.com.br/wp-content/uploads/2024/12/img-omint-alternativo-jovelo-3-480x341-1.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="398" height="199" src="https://coremedical.com.br/wp-content/uploads/2024/12/life-398x199-1.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="221" height="77" src="https://coremedical.com.br/wp-content/uploads/2024/12/logo_blue-saude-1.png" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="300" height="150" src="https://coremedical.com.br/wp-content/uploads/2024/12/logo-300x150-1.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="480" height="105" src="https://coremedical.com.br/wp-content/uploads/2024/12/logo-vivest-480x105-1.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="480" height="144" src="https://coremedical.com.br/wp-content/uploads/2024/12/medi-480x144-1.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="240" height="131" src="https://coremedical.com.br/wp-content/uploads/2024/12/plano-de-saude-careplus-240x131-1.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="600" height="160" src="https://coremedical.com.br/wp-content/uploads/2025/07/notre-dame-intermedica-logo1.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="307" height="136" src="https://coremedical.com.br/wp-content/uploads/2025/07/LOGO-BC-SAUDE-BANCO-CENTRAL.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<img loading="lazy" decoding="async" width="372" height="136" src="https://coremedical.com.br/wp-content/uploads/2025/07/LOGO-UNIAFISCO.webp" class="attachment-full size-full cmsmasters_img" alt="">
+			</div></figure>
+		</div>
+		</div>
+						</div>
+				
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4 · LAYOUT & SPACING ============ -->
+<section id="layout" class="ds-section">
+  <p class="ds-kicker">04 — Layout &amp; Spacing</p>
+  <h2 class="ds-h">Containers &amp; rhythm</h2>
+  <p class="ds-lead">Boxed container max-width <code>1280px</code> (1024px ≤1180, 767px ≤767). Widget spacing <code>20px</code>. Section blocks are rounded <code>40px</code> and inset <code>40px</code> from the viewport.</p>
+  <div class="ds-grid2">
+    <div class="ds-card"><h3>Hero layout — split, min-height 680px</h3>
+      <div class="ds-layoutbox">container <code>4b54d03</code>: radius 40 · padding 60 · margin 0 40 150 40<br>inner <code>95f29d7</code>: flex · space-between · gap 40 · min-height 680 · border 1px</div>
+    </div>
+    <div class="ds-card"><h3>Boxed content — <code>.e-con-boxed</code></h3>
+      <div class="ds-layoutbox">max-width var(--container-max-width) · centered · <code>.e-con-inner</code> holds widgets</div>
+    </div>
+    <div class="ds-card"><h3>Gallery grid — <code>gallery-columns-5</code></h3>
+      <div class="ds-layoutbox">5-column figure grid, custom gallery spacing</div>
+    </div>
+  </div>
+  <p class="ds-note">The hero section above is the canonical split layout, rendered from the original markup and CSS.</p>
+</section>
+
+<!-- ============ 5 · MOTION & INTERACTION ============ -->
+<section id="motion" class="ds-section">
+  <p class="ds-kicker">05 — Motion &amp; Interaction</p>
+  <h2 class="ds-h">Motion gallery</h2>
+  <p class="ds-lead">Entrance animations use Elementor's animation classes (<code>fadeInUp</code>, <code>fadeIn</code>, <code>fadeInDown</code>) — the same keyframe CSS the site loads. Buttons and cards carry the design's own hover transitions.</p>
+  <div class="ds-motion-gallery">
+    <div class="ds-motion-cell"><div data-anim="fadeInUp" class="animated fadeInUp">fadeInUp</div><button data-replay type="button">Replay</button></div>
+    <div class="ds-motion-cell"><div data-anim="fadeIn" class="animated fadeIn">fadeIn</div><button data-replay type="button">Replay</button></div>
+    <div class="ds-motion-cell"><div data-anim="fadeInDown" class="animated fadeInDown">fadeInDown</div><button data-replay type="button">Replay</button></div>
+  </div>
+  <div class="ds-grid2" style="margin-top:26px">
+    <div class="ds-card"><h3>Hover — button transition</h3>
+      <div class="elementor elementor-32421"><div class="elementor-element elementor-widget elementor-widget-cmsmasters-button"><div class="elementor-widget-container"><div class="elementor-widget-cmsmasters-button__button-container"><div class="elementor-widget-cmsmasters-button__button-container-inner"><a href="#components" class="cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsmasters-icon-view- cmsmasters-icon-shape- cmsmasters-button-size-sm" role="button"><span class="elementor-widget-cmsmasters-button__content-wrapper cmsmasters-align-icon-"><span class="elementor-widget-cmsmasters-button__text">Agendar Consulta</span></span></a></div></div></div></div></div>
+      <p class="ds-note" style="margin-top:14px">Hover fills with <code>--e-global-color-primary</code> → text <code>--e-global-color-background</code> (<code>--cmsmasters-button-hover-colors-*</code>).</p>
+    </div>
+    <div class="ds-card"><h3>Scroll reveal — fadeInUp</h3>
+      <div class="elementor elementor-32396"><div class="elementor-element e-con-full e-flex elementor-invisible e-con" data-element_type="container" data-settings='{"animation":"fadeInUp"}'><div class="elementor-element elementor-widget elementor-widget-heading"><div class="elementor-heading-title elementor-size-default">Revela ao entrar na viewport</div></div></div></div>
+    </div>
+  </div>
+  <p class="ds-note">Floating / parallax effects on the hero logo (<code>cmsmasters-effect-type-floating</code>) are driven by the theme's JS runtime, which is not bundled here; the element renders in its resting state.</p>
+</section>
+
+<!-- ============ 6 · ICONS ============ -->
+<section id="icons" class="ds-section" style="border-bottom:none">
+  <p class="ds-kicker">06 — Icons</p>
+  <h2 class="ds-h">Icon systems</h2>
+  <p class="ds-lead">Two systems in use: inline SVG (<code>e-font-icon-svg</code>, brand marks) that inherit <code>currentColor</code> and scale with <code>font-size</code>, and the cmsmasters icon font (<code>cmsms-demo-icon-*</code>).</p>
+  <div class="ds-card"><h3>Inline SVG — color inheritance</h3>
+    <div class="ds-iconset">
+      <svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>
+      <svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook-f" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+      <svg aria-hidden="true" class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+    </div>
+    <div class="ds-iconsizes">
+      <svg class="e-font-icon-svg e-fas-plus" viewBox="0 0 448 512" style="font-size:16px" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+      <svg class="e-font-icon-svg e-fas-plus" viewBox="0 0 448 512" style="font-size:24px" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+      <svg class="e-font-icon-svg e-fas-plus" viewBox="0 0 448 512" style="font-size:40px" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+    </div>
+  </div>
+  <div class="ds-card" style="margin-top:22px"><h3>cmsmasters icon font — <code>cmsms-demo-icon-*</code></h3>
+    <div class="ds-iconset">
+      <i class="cmsmsdemo-icon- cmsms-demo-icon-chevron-down"></i>
+      <i class="cmsmsdemo-icon- cmsms-demo-icon-chevron-up"></i>
+      <i class="cmsmsdemo-icon- cmsms-demo-icon-menu"></i>
+      <i class="cmsmsdemo-icon- cmsms-demo-icon-close"></i>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  // Elementor-style entrance animations: reveal .elementor-invisible with its animation class
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var el = e.target, anim = "fadeInUp";
+      try{ var d = JSON.parse(el.getAttribute("data-settings")||"{}"); if(d.animation) anim = d.animation; }catch(_){}
+      el.classList.add("animated", anim);
+      el.classList.remove("elementor-invisible");
+      io.unobserve(el);
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll(".elementor-invisible").forEach(function(el){ io.observe(el); });
+
+  // single-open accordion (mirrors data-settings max_items_expended:one)
+  document.querySelectorAll(".e-n-accordion").forEach(function(acc){
+    acc.addEventListener("toggle", function(ev){
+      var d = ev.target;
+      if(d.tagName === "DETAILS" && d.open){
+        acc.querySelectorAll("details[open]").forEach(function(o){ if(o!==d) o.open = false; });
+      }
+    }, true);
+  });
+
+  // scrollspy for the top nav
+  var links = [].slice.call(document.querySelectorAll(".ds-nav a"));
+  var map = {}; links.forEach(function(a){ map[a.getAttribute("href").slice(1)] = a; });
+  var spy = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ links.forEach(function(a){ a.classList.remove("is-active"); });
+        if(map[e.target.id]) map[e.target.id].classList.add("is-active"); }
+    });
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  document.querySelectorAll(".ds-section").forEach(function(s){ spy.observe(s); });
+
+  // motion gallery replay
+  document.querySelectorAll("[data-replay]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var box = btn.closest(".ds-motion-cell").querySelector("[data-anim]");
+      var a = box.getAttribute("data-anim");
+      box.classList.remove("animated", a); void box.offsetWidth;
+      box.classList.add("animated", a);
+    });
+  });
+})();
+</script>
+</body></html>
